@@ -1,0 +1,21 @@
+[   {
+	"id": 1,
+	      "NomMat": "Türkçe",
+	      "coeff": 3,
+	      "ValAff": [         "T1",          "T2"      ]
+},     {
+	"id": 2,
+	      "NomMat": "Matematik",
+	      "coeff": 2,
+	      "ValAff": [         "M1",          "M2"      ]
+},     {
+	"id": 3,
+	      "NomMat": "Fen ve Teknoloji",
+	      "coeff": 2,
+	      "ValAff": [         "F1",          "F2"      ]
+},     {
+	"id": 4,
+	      "NomMat": "İnkılâp T. ve Atatürkçülük",
+	      "coeff": 2,
+	      "ValAff": [         "İ1",          "İ2"      ]
+}]

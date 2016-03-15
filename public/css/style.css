@@ -1,0 +1,110 @@
+/*----------------------------------------------*/
+/*Pas d'ascensceur dans les input type=number   */
+/*----------------------------------------------*/
+/*-input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+-moz-appearance: textfield;
+}
+*/
+/*----------------------------------------------*/
+body {
+	padding-top: 50px;
+}
+
+input {
+	text-align: center;
+}
+
+label.ctrl-label {
+	font-family: Helvetica, sans-serif;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 46px;
+  text-align: right;
+}
+
+div.input-group {
+	width: 80px;
+	display: inline-table;
+}
+
+
+.petit_btn {
+	width: 80px;
+	font-size:12px;
+	margin-top: 4px;
+	margin-left: 2px;
+}
+
+.grand_btn	{
+  width: 164px;
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+div.resultat-group {
+	margin: 16px 0 0 2px;
+	height: 100px;
+}
+
+div.resultat {
+	width: 162px;
+}
+
+/*----------------------------------------------*/
+@media (max-width: 768px) {
+body {
+	padding-top: 25px;
+}
+
+label.ctrl-label{
+  font-family: Helvetica, sans-serif;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 16px;
+  padding: 14px 0 0 0px;
+  text-align: right;
+}
+
+div.input-group {
+	width: 60px;
+}
+
+input.input-lg {
+  padding: 4px 4px;
+  font-size: 16px;
+}
+
+
+.petit_btn	{
+  	width: 60px;
+		height: 40px;
+		font-size:11px;
+		padding: 0;
+		margin-left: 0;
+}
+
+.grand_btn	{
+ width: 124px;
+ font-size:12px;
+ margin-left: 0;
+}
+
+div.resultat {
+	width: 124px;
+}
+
+div.form-group {
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+}

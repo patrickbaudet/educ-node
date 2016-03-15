@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fransız Liseleri 2016-2017 Kayıt Puanı Hesaplama</title>
+
+  <meta name="description" content="Puan Hesaplama">
+  <meta name="keywords" content="Puan, Hesaplama, TEOG, Lise, Sınav">
+  <meta name="author" content="P.B.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app="Points">
+<link href="./css/style.css" rel="stylesheet">
+<div class="container" ng-controller="PointsCtrl">
+  <div class = "page-header" style="text-align: center">
+    <h1>
+      <p>Fransız Liseleri</p>
+      <p>2016-2017</p>
+      <p>Kayıt Puanı Hesaplama</p>
+    </h1>
+  </div>
+  <form class="form-inline  col-xs-12" role="form">
+    <div ng-repeat="matiere in matieres track by $index">
+      <div class="form-group col-xs-12">
+        <label class="ctrl-label col-xs-4 col-sm-5">{{matiere.NomMat}}</label>
+        <div class="col-xs-8 col-sm-7 ">
+            <div class="input-group">
+                <input type="text" ng-pattern="/\d*/" ng-change=note1(matiere.id,note1[$index])
+                ng-model="note1[$index]" class="form-control input-lg" placeholder={{matiere.ValAff[0]}}>
+            </div>
+            <div class="input-group">
+                <input type="text" ng-pattern="/\d*/" ng-change=note2(matiere.id,note2[$index])
+                ng-model="note2[$index]" class="form-control input-lg" placeholder={{matiere.ValAff[1]}}>
+            </div>
+        </div>
+    </div>
+    </div>
+  </form>
+  <div class="col-xs-12 bouttons">
+    <div class="col-xs-offset-4 col-xs-8 col-sm-offset-5 col-sm-7 les_bouttons">
+           <button class="btn btn-info petit_btn" ng-click="add90_1()">Hepsi 90</button>
+           <button class="btn btn-info petit_btn" ng-click="add90_2()">Hepsi 90</button>
+    </div>
+    <div class="col-xs-offset-4 col-xs-8 col-sm-offset-5 col-sm-7 les_bouttons">
+           <button class="btn btn-info petit_btn" ng-click="add95_1()">Hepsi 95</button>
+           <button class="btn btn-info petit_btn" ng-click="add95_2()">Hepsi 95</button>
+     </div>
+     <div class="col-xs-offset-4 col-xs-8 col-sm-offset-5 col-sm-7 les_bouttons">
+          <button class="btn btn-info petit_btn" ng-click="add100_1()">Hepsi 100</button>
+          <button class="btn btn-info petit_btn" ng-click="add100_2()">Hepsi 100</button>
+     </div>
+<!-- boutton hesapla
+     <div class="col-xs-offset-4 col-xs-8 col-sm-offset-5 col-sm-7">
+           <button name="points" class="btn btn-primary grand_btn" ng-click="calcul_points()">Hesapla</button>
+     </div>
+-->
+   </div>
+   <hr>
+   <div class="col-xs-12 resultat-group">
+           <label class="ctrl-label col-xs-4 col-sm-5">Puan</label>
+           <div class="col-xs-4 col-sm-4">
+               <div class="input-group resultat">
+                   <div class="input-group-addon">
+                       <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                   </div>
+                   <input ng-model="les_points" class="form-control input-lg" type="text" readonly="readonly">
+               </div>
+           </div>
+     </div>
+
+
+ </div>
+ <script src="node_modules/angular/angular.min.js"></script>
+ <script src="./js/points.js"></script>
+</body>
+</html>
